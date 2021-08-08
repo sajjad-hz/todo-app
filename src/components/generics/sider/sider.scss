@@ -1,0 +1,82 @@
+@import '../../../styles/variables';
+
+aside {
+  flex: none;
+  width: 300px;
+  background-color: map-get($colors, $key: side );
+
+  .side-menu {
+    margin-left: 32px;
+    
+    input{
+        display: none;
+        &:checked ~ * { 
+          color: map-get($colors, $key: primaryfont)
+        }
+    }
+  }
+
+  h1 {
+    margin: 0;
+    padding: 24px 0 24px 24px;
+    background-color: map-get($colors, $key: headertop)
+  }
+
+  .all-tags {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__name {
+      display: inline-block;
+    color: map-get($colors, $key: secondarfont);
+
+    }
+
+    &__count {
+      padding: 2px 12px;
+      background-color: #172b4d;
+      color: #e3eaf5;
+      border-radius: 8px;
+      line-height: 1.3;
+    }
+
+  }
+
+  .tags {
+    margin: 0;
+    padding: 0;
+
+
+
+    &-right{
+        width: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+
+  .list-tags {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+
+    &__name{
+        font-size: 18px;
+        font-weight: 500;
+    color: #818DA2;
+
+    }
+
+    &__count {
+        padding: 2px 12px;
+        border-radius: 8px;
+        line-height: 1.3;
+      }
+
+  }
+}

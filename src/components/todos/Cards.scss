@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 16px 16px 0;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px #eee;
+  }
+
+  &-title{
+    margin-left: 16px;
+  }
+
+  &-text {
+    height: 176px;
+    margin-bottom: 16px;
+    overflow: auto;
+    list-style: none;
+    padding-left: 34px;
+    
+
+    li {
+      position: relative;
+      margin: 6px 0;
+
+      &::before {
+        content: "";
+        background-color: map-get($colors, $key: primaryfont);
+        border-radius: 25%;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 8px;
+        left: -17px;
+      }
+    }
+  }
+
+  &-footer {
+    width: 85%;
+    height: 39px;
+    margin: 0 auto;
+    background-color: map-get($colors, $key: bg);
+
+    img {
+      height: 24px;
+    }
+
+    span{
+      border-radius: 5px;
+    }
+  }
+
+  &-tag {
+    float: right;
+    padding: 4px 8px;
+  }
+}

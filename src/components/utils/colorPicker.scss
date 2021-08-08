@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.color {
+  position: relative;
+}
+
+.color-icon {
+  height: 18px;
+}
+
+.color-picker {
+  width: 100px;
+  height: 75px;
+  position: absolute;
+  top: 32px;
+  background-color: map-get($colors, $key:side );
+  z-index: 9;
+
+  span {
+    display: inline-block;
+    width: 21%;
+    height: 30%;
+    margin: 0 2px;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        background-color: (nth($pallete-colors, $i));
+      }
+    }
+  }
+}
+

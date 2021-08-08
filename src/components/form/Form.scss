@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+
+.form-container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 999999999;
+}
+
+.form {
+    width: 500px;
+    position: absolute;
+    background-color: map-get($colors, $key: bg );
+    box-shadow: 0 10px 10px #ddd;
+
+
+    &-title {
+        display: block;
+        background-color: map-get($colors, $key: bg );
+        box-shadow: 0 0 10px 1px #ddd;
+        
+    }
+    
+    &-title, &-text{
+        width: 100%;
+        height: 48px;
+        padding-left: 8px;
+        border:  none ;
+        outline: none;
+
+        
+        &:hover{
+            background-color: map-get($colors, $key: side);
+            transition: all ease .3s;
+        }
+
+        &::placeholder {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 12px;
+        }
+    }
+
+    &-text{
+        background-color: map-get($colors , $key: bg);
+        overflow: hidden;
+        resize: none;
+        max-height: 500px;
+        overflow-y: auto;
+        padding-top: 8px;
+    }
+
+  &-footer{
+      position: relative;
+  }
+
+  &-btns {
+    display: flex;
+    padding: 16px;
+    justify-content: flex-end;
+
+    
+    input[type=submit]{
+        width: 80px;
+        padding: 8px 0px;
+        background-color: map-get($colors, $key:primaryfont );
+        color: map-get($colors, $key: bg);
+        border: none;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: map-get($colors, $key: primaryhover);
+            transition: all ease .3s;
+        }
+    }
+
+    button {
+        width: 80px;
+        padding: 8px 0;
+        background-color: transparent;
+        border: none;
+        margin-right: 16px ;
+        border-radius: 5px;
+
+
+        &:hover{
+            background-color: map-get($colors, $key: side);
+            transition: all ease .3s;
+        }
+    }
+
+  }
+}

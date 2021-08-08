@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+.search-box {
+  margin-left: 32px;
+  height: 48px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  
+  &:hover{
+    background-color: map-get($colors, $key: side);
+    transition: all ease .3s;
+}
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    margin-left: 8px;
+    border-radius: 8px;
+    background-color: map-get($colors, $key: bg);
+
+    
+    &:hover{
+      background-color: map-get($colors, $key: side);
+      transition: all ease .3s;
+  }
+  }
+}
+
+#search-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 16px;
+}
